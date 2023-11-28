@@ -1,41 +1,3 @@
-class Game{
-  constructor(startButton,weaponChoiceMenu,rockChoice,paperChoice,scissorChoice,playerScore,computerScore,playerScoreIcon,computerScoreIcon,roundResult,roundCriteria){
-    this.startButton = startButton
-    this.weaponChoiceMenu = weaponChoiceMenu
-    this.rockChoice = rockChoice
-    this.paperChoice = paperChoice
-    this.scissorChoice = scissorChoice
-    this.playerScore = playerScore
-    this.computerScore = computerScore
-    this.playerScoreIcon = playerScoreIcon
-    this.computerScoreIcon = computerScoreIcon
-    this.roundResult = roundResult
-    this.roundCriteria = roundCriteria
-
-    this.startButton.addEventListener('click', this.start)
-  }
-
-  start = () => {
-    this.weaponChoiceMenu.style.display = 'flex'
-    this.startButton.style.display = 'none'
-    this.rockChoice.addEventListener('click', this.rock)
-    this.paperChoice.addEventListener('click', this.paper)
-    this.scissorChoice.addEventListener('click', this.scissor)
-  }
-
-  rock = () => {
-    console.log('rock')
-  }
-
-  paper = () => {
-    console.log('paper')
-  }
-
-  scissor = () => {
-    console.log('scissor')
-  }
-}
-
 const startButton = document.querySelector('#startButton')
 const weaponChoiceMenu = document.querySelector('#weaponChoice')
 const rockChoice = document.querySelector('#rockChoice')
@@ -48,4 +10,26 @@ const roundCriteria = document.querySelector('#roundCriteria')
 const playerScoreIcon = document.querySelector('#playerScoreIcon')
 const computerScoreIcon = document.querySelector('#computerScoreIcon')
 
-const game = new Game(startButton,weaponChoiceMenu,rockChoice,paperChoice,scissorChoice,playerScore,computerScore,playerScoreIcon,computerScoreIcon,roundResult,roundCriteria)
+startButton.addEventListener('click', startGame)
+
+function startGame(){
+  startButton.style.display = 'none'
+  weaponChoiceMenu.style.display = 'flex'
+  rockChoice.addEventListener('click', () => {
+    score('rock')
+  })
+  paperChoice.addEventListener('click', () => {
+    score('paper')
+  })
+  scissorChoice.addEventListener('click', () => {
+    score('scissor')
+  })
+} 
+
+function score(playerChoice){
+  console.log(playerChoice)
+}
+
+function getComputerChoice(){
+  
+}

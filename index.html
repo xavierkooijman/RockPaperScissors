@@ -13,30 +13,31 @@
   </header>
   <main>
     <div class="gameInfoText">
-      <h2>Choose your weapon</h2>
-      <h3>Infinite game</h3>
+      <h2 id="roundResult">Choose your weapon</h2>
+      <h3 id="roundCriteris">First to five wins</h3>
     </div>
     <div class="gameScore">
-      <div class="playerScore">
-        <i class="fa-solid fa-question"></i>
+      <div id="playerScore">
+        <i id="playerScoreIcon" class="fa-solid fa-question"></i>
         <p>Player: 0</p>
       </div>
-      <div class="computerScore">
-        <i class="fa-solid fa-question"></i>
+      <div id="computerScore">
+        <i id="computerScoreIcon" class="fa-solid fa-question"></i>
         <p>Computer: 0</p>
       </div>
     </div>
-    <div class="weaponChoice">
-      <div class="rock">
+    <div class="weaponChoice" id="weaponChoice">
+      <div id="rockChoice">
         <i class="fa-solid fa-hand-back-fist"></i>
       </div>
-      <div class="paper">
+      <div id="paperChoice">
         <i class="fa-solid fa-hand"></i>
       </div>
-      <div class="scissor">
+      <div id="scissorChoice">
         <i class="fas fa-hand-scissors"></i>
       </div>
     </div>
+    <button class="startButton" id="startButton">START GAME</button>
   </main>
   <script src="js/app.js"></script>
 </body>

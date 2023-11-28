@@ -4,6 +4,73 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #30353b;
+  color: white;
+}
+
+header{
+  background-color: #1c2129;
+  text-align: center;
+}
+
+header h1{
+  color: #fac650;
+  text-align: center;
+  padding: 1em 0;
+}
+
 .weaponChoice{
-  color: #ffdd00;
+  display: flex;
+  color: #fac650;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameScore{
+  display: flex;
+}
+
+.gameInfoText{
+  text-align: center;
+}
+
+.weaponChoice i{
+  padding: 4em;
+}
+
+.weaponChoice div{
+  background-color: #393e46;
+  margin: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.weaponChoice{
+  display: none;
+}
+
+h2{
+  padding-top: 1em;
+}
+
+.gameScore div{
+  text-align: center;
+  margin: 1em;
+}
+
+.startButton{
+  background-color: #393e46;
+  border: #1c2129 solid 1px;
+  color: #fac650;
+  border-radius: 5px;
+  scale: 2;
+  cursor: pointer;
+  padding: 1em;
+  margin-top: 4em;
 }

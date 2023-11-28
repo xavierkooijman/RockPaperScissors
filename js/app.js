@@ -1,6 +1,38 @@
 class Game{
   constructor(startButton,weaponChoiceMenu,rockChoice,paperChoice,scissorChoice,playerScore,computerScore,playerScoreIcon,computerScoreIcon,roundResult,roundCriteria){
-    this = {startButton,weaponChoiceMenu,rockChoice,paperChoice,scissorChoice,playerScore,computerScore,playerScoreIcon,computerScoreIcon,roundResult,roundCriteria}
+    this.startButton = startButton
+    this.weaponChoiceMenu = weaponChoiceMenu
+    this.rockChoice = rockChoice
+    this.paperChoice = paperChoice
+    this.scissorChoice = scissorChoice
+    this.playerScore = playerScore
+    this.computerScore = computerScore
+    this.playerScoreIcon = playerScoreIcon
+    this.computerScoreIcon = computerScoreIcon
+    this.roundResult = roundResult
+    this.roundCriteria = roundCriteria
+
+    this.startButton.addEventListener('click', this.start)
+  }
+
+  start = () => {
+    this.weaponChoiceMenu.style.display = 'flex'
+    this.startButton.style.display = 'none'
+    this.rockChoice.addEventListener('click', this.rock)
+    this.paperChoice.addEventListener('click', this.paper)
+    this.scissorChoice.addEventListener('click', this.scissor)
+  }
+
+  rock = () => {
+    console.log('rock')
+  }
+
+  paper = () => {
+    console.log('paper')
+  }
+
+  scissor = () => {
+    console.log('scissor')
   }
 }
 

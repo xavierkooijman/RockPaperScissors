@@ -82,9 +82,13 @@ function getComputerChoice(){
 function win(playerChoice,computerChoice){
   roundResult.innerText = "YOU WIN"
   roundCriteria.innerText = `${playerChoice} beats ${computerChoice}`
+  playerPoints += 1
+  playerScore.innerText = `Player: ${playerPoints}`
 }
 
 function lose(playerChoice,computerChoice){
   roundResult.innerText = "YOU LOSE"
   roundCriteria.innerText = `${playerChoice} loses to ${computerChoice}`
+  computerPoints += 1
+  computerScore.innerText = `Computer: ${computerPoints}`
 }

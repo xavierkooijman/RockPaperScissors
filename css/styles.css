@@ -74,3 +74,7 @@ h2{
   padding: 1em;
   margin-top: 4em;
 }
+
+.gameScore i{
+  color: #fac650;
+}
